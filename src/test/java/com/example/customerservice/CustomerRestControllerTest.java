@@ -30,11 +30,11 @@ public class CustomerRestControllerTest {
         Mockito.when(customerService.findCustomerById(1L))
                 .thenReturn(new Customer(1L, "Michael", "Jordan"));
 
-        mockMvc.perform((MockMvcRequestBuilders.get("/client/1")))
+        mockMvc.perform((MockMvcRequestBuilders.get("/customer/1")))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.jsonPath("id").value(1L))
                 .andExpect(MockMvcResultMatchers.jsonPath("firstName").value("Michael"))
-                .andExpect(MockMvcResultMatchers.jsonPath("surname").value("Jordan"))
+                .andExpect(MockMvcResultMatchers.jsonPath("lastName").value("Jordan"))
                 .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON));
     }
 }

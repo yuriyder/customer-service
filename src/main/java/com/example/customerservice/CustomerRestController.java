@@ -13,7 +13,7 @@ public class CustomerRestController {
         this.customerService = customerService;
     }
 
-    @GetMapping("/client/{id}")
+    @GetMapping("/customer/{id}")
     public Customer findPersonById(@PathVariable("id") Long id) {
         return customerService.findCustomerById(id);
     }

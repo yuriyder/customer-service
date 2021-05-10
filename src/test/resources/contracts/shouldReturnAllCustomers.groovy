@@ -5,7 +5,7 @@ import org.springframework.http.MediaType
 Contract.make {
     description "should return all customers"
     request {
-        url "/client/1"
+        url "/customer/1"
         method GET()
     }
     response {
@@ -16,7 +16,7 @@ Contract.make {
         body (
                 id: 1,
                 firstName: "Michael",
-                surname: "Jordan"
+                lastName: "Jordan"
         )
     }
 }
